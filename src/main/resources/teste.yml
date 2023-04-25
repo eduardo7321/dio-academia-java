@@ -1,0 +1,40 @@
+
+
+server.port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    #url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    #server.port = 8081 OK
+    #spring.datasource.driver-class-name=org.h2.Driver IK
+    #spring.datasource.url=jdbc:h2:mem:teste OK
+    #spring.datasource.username=sa OK
+    #spring.datasource.password= OK
+    #spring.h2.console.enabled=true OK
+    #spring.h2.console.path=/h2 OK
+    #spring.jpa.hibernate.ddl-auto=create OK
+    #spring.jpa.show-sql=true OK
+    #spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+    hibernate.format_sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+    #logging:
+    # level:
+    #  org:
+    #   hibernate:
+    #    type: trace
